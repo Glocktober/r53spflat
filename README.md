@@ -123,7 +123,7 @@ Create a spfs.json file.  Add all the entries required:
 ### 3. Create a credentials file for AWS
 * The AWS user or role used for `r53spflat` must have these permissions to make updates:
     * `ListHostedZones` to Route53
-    * `ChangeResourceRecordSets` to the zones that will be updated 
+    * `ChangeResourceRecordSets` and `ListResourceRecordSets` to the zones that will be updated 
 * If `r53spflat` run on an AWS EC2 instance, an IAM role with the required privileges can be attached to the instance.
 * If `r53spflat` runs on prem, API keys are required to make the AWS Route53 updates and placed in a configuation file.
     * Configuring this beyond our scope: refere to [AWS cli](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
